@@ -13,7 +13,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.baronqi.jetpackvideo.R;
+import com.baronqi.libannotation.FragmentDestination;
 
+@FragmentDestination(path = "main/tab/dashboard", isDefault = false)
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;

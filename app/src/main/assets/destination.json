@@ -1,0 +1,26 @@
+{
+  "main/tab/home": {
+    "path": "main/tab/home",
+    "isDefault": true,
+    "isActivity": false,
+    "id": 1477521608,
+    "login": false,
+    "clazzName": "com.baronqi.jetpackvideo.ui.home.HomeFragment"
+  },
+  "main/tab/notification": {
+    "path": "main/tab/notification",
+    "isDefault": false,
+    "isActivity": false,
+    "id": 1848678836,
+    "login": false,
+    "clazzName": "com.baronqi.jetpackvideo.ui.notifications.NotificationsFragment"
+  },
+  "main/tab/dashboard": {
+    "path": "main/tab/dashboard",
+    "isDefault": false,
+    "isActivity": false,
+    "id": 1603270236,
+    "login": false,
+    "clazzName": "com.baronqi.jetpackvideo.ui.dashboard.DashboardFragment"
+  }
+}
