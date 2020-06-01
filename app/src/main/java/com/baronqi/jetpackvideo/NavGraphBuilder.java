@@ -31,7 +31,7 @@ public class NavGraphBuilder {
                 ActivityNavigator.Destination destination = activityNavigator.createDestination();
                 destination.setId(value.getId());
                 destination.addDeepLink(value.getPath());
-                destination.setComponentName(new ComponentName(AppGlobals.getApplication().getPackageName(), value.getPath()));
+                destination.setComponentName(new ComponentName(AppGlobals.getApplication().getPackageName(), value.getClazzName()));
                 navGraph.addDestination(destination);
             } else {
                 FragmentNavigator.Destination destination = fragmentNavigator.createDestination();

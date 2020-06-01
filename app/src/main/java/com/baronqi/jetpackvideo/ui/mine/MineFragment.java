@@ -1,4 +1,4 @@
-package com.baronqi.jetpackvideo.ui.notifications;
+package com.baronqi.jetpackvideo.ui.mine;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,8 +15,8 @@ import androidx.lifecycle.ViewModelProviders;
 import com.baronqi.jetpackvideo.R;
 import com.baronqi.libannotation.FragmentDestination;
 
-@FragmentDestination(path = "main/tab/notification")
-public class NotificationsFragment extends Fragment {
+@FragmentDestination(path = "main/tab/mine")
+public class MineFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 

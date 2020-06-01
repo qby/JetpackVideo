@@ -1,4 +1,4 @@
-package com.baronqi.jetpackvideo.ui.dashboard;
+package com.baronqi.jetpackvideo.ui.find;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,15 +15,15 @@ import androidx.lifecycle.ViewModelProviders;
 import com.baronqi.jetpackvideo.R;
 import com.baronqi.libannotation.FragmentDestination;
 
-@FragmentDestination(path = "main/tab/dashboard", isDefault = false)
-public class DashboardFragment extends Fragment {
+@FragmentDestination(path = "main/tab/find", isDefault = false)
+public class FindFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private FindViewModel dashboardViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+                ViewModelProviders.of(this).get(FindViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
