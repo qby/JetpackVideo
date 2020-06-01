@@ -1,2 +1,4 @@
+include ':libcommon'
+include ':libnetwork'
 rootProject.name='JetpackVideo'
 include ':app' ,':libannotation' ,':processor'
