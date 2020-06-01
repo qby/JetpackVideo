@@ -57,17 +57,17 @@ public class AppBottomBar extends BottomNavigationView {
 //        setSelectedItemId(tabs.getSelectTab());
 
         for (Tabs.TabBean tab : tabs.getTabs()) {
-            if (!tab.isEnable()) return;
-            if (getId(tab.getPath()) < 0) return;
+            if (!tab.isEnable()) continue;
+            if (getId(tab.getPath()) < 0) continue;
             MenuItem item = getMenu().add(0, getId(tab.getPath()), tab.getIndex(), tab.getTitle());
             item.setIcon(sIcons[tab.getIndex()]);
         }
 
         int index = 0;
         for (Tabs.TabBean tab : tabs.getTabs()) {
-            if (!tab.isEnable()) return;
+            if (!tab.isEnable()) continue;
             int id;
-            if ((id = getId(tab.getPath())) < 0) return;
+            if ((id = getId(tab.getPath())) < 0) continue;
 
             int iconSize = DimenUtil.dp2px(tab.getSize());
 
