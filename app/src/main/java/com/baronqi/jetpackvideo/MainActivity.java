@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         NavigationUI.setupWithNavController(navView, navController);
 
-        NavGraphBuilder.build(navController);
+        NavGraphBuilder.build(navController, this, R.id.nav_host_fragment);
 
         navView.setOnNavigationItemSelectedListener(this);
     }

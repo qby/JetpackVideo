@@ -2,6 +2,8 @@ package com.baronqi.jetpackvideo;
 
 import android.content.ComponentName;
 
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.ActivityNavigator;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
@@ -10,15 +12,22 @@ import androidx.navigation.NavigatorProvider;
 import androidx.navigation.fragment.FragmentNavigator;
 
 import com.baronqi.jetpackvideo.model.Destination;
+import com.baronqi.jetpackvideo.navigator.FixFragmentNavigator;
 import com.baronqi.jetpackvideo.util.AppConfig;
 
 import java.util.HashMap;
 
 public class NavGraphBuilder {
 
-    public static void build(NavController controller) {
+    public static void build(NavController controller, FragmentActivity activity, int containerId) {
+
         NavigatorProvider navigatorProvider = controller.getNavigatorProvider();
-        FragmentNavigator fragmentNavigator = navigatorProvider.getNavigator(FragmentNavigator.class);
+//        FragmentNavigator fragmentNavigator = navigatorProvider.getNavigator(FragmentNavigator.class);
+
+        FixFragmentNavigator fixFragmentNavigator = new FixFragmentNavigator(activity, activity.getSupportFragmentManager(), containerId);
+
+        navigatorProvider.addNavigator(fixFragmentNavigator);
+
         ActivityNavigator activityNavigator = navigatorProvider.getNavigator(ActivityNavigator.class);
 
         HashMap<String, Destination> destConfig = AppConfig.getDestConfig();
@@ -34,7 +43,7 @@ public class NavGraphBuilder {
                 destination.setComponentName(new ComponentName(AppGlobals.getApplication().getPackageName(), value.getClazzName()));
                 navGraph.addDestination(destination);
             } else {
-                FragmentNavigator.Destination destination = fragmentNavigator.createDestination();
+                FragmentNavigator.Destination destination = fixFragmentNavigator.createDestination();
                 destination.setClassName(value.getClazzName());
                 destination.setId(value.getId());
                 destination.addDeepLink(value.getPath());
