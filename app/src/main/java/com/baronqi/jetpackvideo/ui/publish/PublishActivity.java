@@ -1,6 +1,5 @@
 package com.baronqi.jetpackvideo.ui.publish;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;

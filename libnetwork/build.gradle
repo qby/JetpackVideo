@@ -21,11 +21,10 @@ android {
         }
     }
 
-//    compileOptions {
-//        coreLibraryDesugaringEnabled true
-//        sourceCompatibility JavaVersion.VERSION_1_8
-//        targetCompatibility JavaVersion.VERSION_1_8
-//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -41,6 +40,9 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
     annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+
+    compileOnly 'com.alibaba:fastjson:1.2.68'
+    implementation 'com.google.guava:guava:29.0-jre'
 
 
 }

@@ -26,6 +26,10 @@ android {
         targetCompatibility "1.8"
     }
 
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -41,7 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.alibaba:fastjson:1.2.68'
     implementation project(":libannotation")
+    implementation project(":libcommon")
     annotationProcessor project(":processor")
 }
