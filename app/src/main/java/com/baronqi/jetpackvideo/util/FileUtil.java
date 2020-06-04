@@ -2,7 +2,7 @@ package com.baronqi.jetpackvideo.util;
 
 import android.content.res.AssetManager;
 
-import com.baronqi.jetpackvideo.AppGlobals;
+import com.baronqi.libcommon.AppGlobals;
 
 import java.io.BufferedReader;
 import java.io.IOException;

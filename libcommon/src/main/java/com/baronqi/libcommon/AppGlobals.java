@@ -1,4 +1,4 @@
-package com.baronqi.jetpackvideo;
+package com.baronqi.libcommon;
 
 import android.app.Application;
 

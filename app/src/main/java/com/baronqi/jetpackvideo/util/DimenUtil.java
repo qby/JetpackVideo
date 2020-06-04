@@ -1,6 +1,6 @@
 package com.baronqi.jetpackvideo.util;
 
-import com.baronqi.jetpackvideo.AppGlobals;
+import com.baronqi.libcommon.AppGlobals;
 
 public class DimenUtil {
 

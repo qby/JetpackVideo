@@ -3,7 +3,6 @@ package com.baronqi.jetpackvideo;
 import android.content.ComponentName;
 
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.navigation.ActivityNavigator;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
@@ -14,6 +13,7 @@ import androidx.navigation.fragment.FragmentNavigator;
 import com.baronqi.jetpackvideo.model.Destination;
 import com.baronqi.jetpackvideo.navigator.FixFragmentNavigator;
 import com.baronqi.jetpackvideo.util.AppConfig;
+import com.baronqi.libcommon.AppGlobals;
 
 import java.util.HashMap;
 

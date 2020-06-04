@@ -47,5 +47,6 @@ dependencies {
 
     implementation project(":libannotation")
     implementation project(":libcommon")
+    implementation project(":libnetwork")
     annotationProcessor project(":processor")
 }
